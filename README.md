@@ -1,66 +1,71 @@
-# Getting Started with Create React App
+# Video Analytics React App
+This React application provides a video player with advanced analytics tracking capabilities. It allows users to watch a video while the app tracks viewing patterns, section views, and generates real-time analytics.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+Video playback with standard controls
+Section-based view tracking
+Real-time chart of section views
+Event logging for play, pause, seek, and end actions
+Responsive design
 
-In the project directory, you can run:
+## Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-### `npm start`
+Node.js and npm installed
+Basic knowledge of React and JavaScript
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the repository:
+git clone https://github.com/yourusername/video-analytics-react-app.git
 
-### `npm test`
+Navigate to the project directory:
+cd video-analytics-react-app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the dependencies:
+npm install
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open your browser and visit http://localhost:3000
+Use the video player controls to play, pause, and seek through the video. The app will automatically track your viewing patterns.
 
-### `npm run eject`
+## Configuration
+You can adjust the following constants in the App.js file to customize the tracking behavior:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+SECTION_DURATION: The duration of each section in seconds (default: 10)
+VIEW_THRESHOLD: The percentage of a section that must be watched to count as a view (default: 0.5, or 50%)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
+Video Player
+The app uses a standard HTML5 video player with custom event listeners for tracking user interactions.
+Analytics Chart
+A line chart implemented using recharts displays the number of views for each video section.
+Section Views
+A list of all sections and their view counts is displayed below the chart.
+Event Logging
+The most recent event (play, pause, seek, or end) is displayed at the bottom of the page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Data Tracking
+The app tracks the following data:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Section views: Counted when a user watches at least 50% of a 10-second section
+Play, pause, seek, and end events
+Watch time for each section
 
-## Learn More
+## Contributing
+Contributions to this project are welcome. Please follow these steps:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Fork the repository
+Create a new branch: git checkout -b feature-branch-name
+Make your changes and commit them: git commit -m 'Add some feature'
+Push to the original branch: git push origin feature-branch-name
+Create the pull request
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
+This project is licensed under the MIT License.
