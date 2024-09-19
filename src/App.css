@@ -15,7 +15,6 @@
 
 .App-header {
   background-color: #1d1d1d;
-  max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
